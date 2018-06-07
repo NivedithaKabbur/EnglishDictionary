@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EnglishDictionary</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_id">89aa363b</string>
+    <string name="app_key">b54bb6e8546b7f3ec6e65418b63b3b14</string>
+    <string name="url">https://od-api.oxforddictionaries.com/api/v1/entries/en/</string>
+</resources>
