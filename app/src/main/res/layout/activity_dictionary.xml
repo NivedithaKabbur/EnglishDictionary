@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.assignment.englishdictionary.MainActivity">
+    tools:context="com.assignment.englishdictionary.DictionaryActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -18,7 +18,7 @@
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="false"
+            android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             >
@@ -48,24 +48,49 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:text="Button">
+                    android:orientation="vertical">
 
-                    <CheckBox
-                        android:id="@+id/chk_synonyms"
+                    <TextView
+                        android:id="@+id/textView_word"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Synonyms"
-                        android:checked="true"/>
+                        android:layout_margin="10dp"
+                        android:text="text"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primaryText"
+                        android:textStyle="bold"
+                        android:fontFamily="cursive"
+                        android:textSize="40sp" />
 
-                    <CheckBox
-                        android:id="@+id/chk_antonyms"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Antonyms"
-                        android:checked="true"/>
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_phonetic_notation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="text"
+                            android:textColor="@color/primaryText"
+                            android:fontFamily="sans-serif"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_phonetic_spelling"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="text"
+                            android:textColor="@color/primaryText"
+                            android:fontFamily="sans-serif"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
-
             </FrameLayout>
 
             <android.support.v7.widget.Toolbar
@@ -86,7 +111,7 @@
                     android:textColorHint="@color/secondaryText"
                     android:textColor="@color/primaryText"
                     android:imeOptions="actionSearch"
-                    android:inputType="text"
+                    android:inputType="textCapWords"
                     android:padding="8dp" />
 
             </android.support.v7.widget.Toolbar>
@@ -96,7 +121,7 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_dictionary" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_find"
@@ -104,6 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:clickable="true"
+        android:src="@drawable/outline_search_white_18dp"
         android:background="@color/colorAccent"
         app:layout_anchor="@id/collapsing_toolbar"
         app:layout_anchorGravity="bottom|right|end"/>

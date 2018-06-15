@@ -5,4 +5,6 @@
     <string name="app_id">89aa363b</string>
     <string name="app_key">b54bb6e8546b7f3ec6e65418b63b3b14</string>
     <string name="url">https://od-api.oxforddictionaries.com/api/v1/entries/en/</string>
+    <string name="synonyms_defn">A word or phrase that means exactly or nearly the same as another word or phrase in the same language, for example shut is a synonym of close.</string>
+    <string name="antonyms_defn">A word opposite in meaning to another (e.g. bad and good ).</string>
 </resources>
